@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Turn-Based Chess-like Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="current-player">Current Player: A</h1>
+    <div id="grid">
+      <!-- Top Row for Player A -->
+      <div class="cell" id="A-P1">A-P1</div>
+      <div class="cell" id="A-P2">A-P2</div>
+      <div class="cell" id="A-H1">A-H1</div>
+      <div class="cell" id="A-H2">A-H2</div>
+      <div class="cell" id="A-P3">A-P3</div>
+      <!-- Empty Rows -->
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <!-- Bottom Row for Player B -->
+      <div class="cell" id="B-P1">B-P1</div>
+      <div class="cell" id="B-P2">B-P2</div>
+      <div class="cell" id="B-H1">B-H1</div>
+      <div class="cell" id="B-H2">B-H2</div>
+      <div class="cell" id="B-P3">B-P3</div>
+    </div>
+
+    <p id="selected-character">Selected: None</p>
+    <p id="message"></p>
+
+    <div id="controls">
+      <button id="move-L" onclick="move('L')">L</button>
+      <button id="move-R" onclick="move('R')">R</button>
+      <button id="move-F" onclick="move('F')">F</button>
+      <button id="move-B" onclick="move('B')">B</button>
+      <button id="move-FL" onclick="move('FL')">FL</button>
+      <button id="move-FR" onclick="move('FR')">FR</button>
+      <button id="move-BL" onclick="move('BL')">BL</button>
+      <button id="move-BR" onclick="move('BR')">BR</button>
+    </div>
+    <p id="moves-log"></p>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
